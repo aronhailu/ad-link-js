@@ -1,5 +1,14 @@
-#download {
+.brown {
     background-color: brown;
     color: white;
     padding: 1rem 2rem;
+}
+.orange {
+    background-color: orange;
+    color: white;
+    padding: 1rem 2rem;
+}
+div {
+    margin: 3rem 1rem;
+    padding: 1rem 1rem;
 }
