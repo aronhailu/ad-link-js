@@ -13,6 +13,11 @@
     color: white;
     padding: 1rem 2rem;
 }
+.blue {
+    background-color: blue;
+    color: white;
+    padding: 1rem 2rem;
+}
 div {
     margin: 3rem 1rem;
     padding: 1rem 1rem;
