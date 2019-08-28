@@ -1,3 +1,8 @@
+/*
+*To links or buttons you want to add AdLink give class attribue of download (class="download")
+* pass argument of URL, window name, windown width and window height for the popup AdPage to be opened
+*/
+
 var URL = 'http://www.damaengineeringsolution.com';
 var windowName = 'DAMA_ENGINEERING';
 var windowWidth = '700';
@@ -5,57 +10,48 @@ var windowHight = '600';
 
 (function() {
 
-    var downloadButton = document.querySelectorAll('.download');
+    // get all download links on the web page
 
-    // 1. on first click attach the eventhandler to all button/anchor link and set href attribute of button/anchor to #
+    var downloadLink = document.querySelectorAll('a.download');
 
-   function oneTimeEventListen() {
+    openAdPage();
+    
+   function openAdPage() {
 
-        for(var i=0; i<downloadButton.length; i++) {
+        for(var i = 0; i < downloadLink.length; i++) {
 
-        
+            var n=0;
                     
-            downloadButton[i].addEventListener('click', function addAdLink() {
-    
-                //   var child = downloadButton[i].firstChild  ;
-                //   console.log(child);
-                //   var parent = downloadButton[i].parentElement;
-                //   console.log('parent: ' + parent);
-    
-                
-    
-                //this.removeEventListener('click', addAdLink);
+            // bount every download link with event handler for click event
 
-                this.setAttribute("href", "#");
-                // this.parentNode.setAttribute("href", "#");
-                // this.childNode.setAttribute("href", "#");
-                
+            downloadLink[i].addEventListener('click', function() {
+
+                n++;
     
+                if( n % 2 == 0 ) {
+
+                    // on the second click go to a link which is a value of href attribue
+
+                    this.setAttribute("href", "http://www.google.com");
+
+                }else {
+                    
+                    // on the first click open an Ad link on popup window
+
+                    this.setAttribute("href", "#");
+                    var centerLeft = (screen.width/2) - (windowWidth/2);
+                    var centerTop = (screen.height/2) - (windowHight/2);
+                    var windowFeatures = 'toolbar=no, location=no, directories=no, status=no, menubar=no, titlebar=no, scrollbars=no, resizable=no ';
             
-                var centerLeft = (screen.width/2) - (windowWidth/2);
-                var centerTop = (screen.height/2) - (windowHight/2);
-                var windowFeatures = 'toolbar=no, location=no, directories=no, status=no, menubar=no, titlebar=no, scrollbars=no, resizable=no ';
-        
-                window.open(URL, windowName, windowFeatures + ', width=' + windowWidth + ', height=' + windowHight + ', top=' +
-                centerTop + ', left=' + centerLeft);
-
-                //this.setAttribute("href", "http://www.google.com");
-
-                      
+                    window.open(URL, windowName, windowFeatures + ', width=' + windowWidth + ', height=' + windowHight + ', top=' +
+                    centerTop + ', left=' + centerLeft);
+                }
                    
-                // 2. then detach the eventhandler from the button/anchor 
-            }, { once: true });
-    
+            });
+              
         }
-    
+
     };
-
-    oneTimeEventListen();
-
-     
-    // 3. agian attach the Ad link event handler after 15min
-
-    setInterval(oneTimeEventListen, 15000);
 
 })(URL, windowName, windowWidth, windowHight);
 
@@ -63,7 +59,6 @@ var windowHight = '600';
 
 
 
-// 3. if we click within this 5sec the button/anchor will direct us to the original link
 
 
 
