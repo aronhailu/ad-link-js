@@ -3,12 +3,12 @@
 * pass argument of URL, window name, windown width and window height for the popup AdPage to be opened
 */
 
-// var URL = 'http://www.damaengineeringsolution.com';
-// var windowName = 'DAMA_ENGINEERING';
-// var windowWidth = '700';
-// var windowHight = '600';
+var URL = 'http://www.damaengineeringsolution.com';
+var windowName = 'DAMA_ENGINEERING';
+var windowWidth = '700';
+var windowHight = '600';
 
-exports.addLinkJs = (function() {
+ (function() {
 
     // get all download links on the web page
 
@@ -20,31 +20,39 @@ exports.addLinkJs = (function() {
 
         for(var i = 0; i < downloadLink.length; i++) {
 
-            var n=0;
+            var condition = true;
                     
             // bount every download link with event handler for click event
 
             downloadLink[i].addEventListener('click', function() {
+                
+                setTimeout(function status() {
 
-                n++;
-    
-                if( n % 2 == 0 ) {
+                    condition = true;
+                    alert('time out expires');
 
-                    // on the second click go to a link which is a value of href attribue
+                }, 15000);
+
+                if(condition) {
+
+                        var centerLeft = (screen.width/2) - (windowWidth/2);
+                        var centerTop = (screen.height/2) - (windowHight/2);
+                        var windowFeatures = 'toolbar=no, location=no, directories=no, status=no, menubar=no, titlebar=no, scrollbars=no, resizable=no ';
+
+                        this.setAttribute("href", "#");
+
+                        window.open(URL, windowName, windowFeatures + ', width=' + windowWidth + ', height=' + windowHight + ', top=' +
+                        centerTop + ', left=' + centerLeft);
+
+                        condition = false;
+                        
+
+                }else if(!condition) {
+
+                    alert("before expires");
 
                     this.setAttribute("href", "http://www.google.com");
 
-                }else {
-                    
-                    // on the first click open an Ad link on popup window
-
-                    this.setAttribute("href", "#");
-                    var centerLeft = (screen.width/2) - (windowWidth/2);
-                    var centerTop = (screen.height/2) - (windowHight/2);
-                    var windowFeatures = 'toolbar=no, location=no, directories=no, status=no, menubar=no, titlebar=no, scrollbars=no, resizable=no ';
-            
-                    window.open(URL, windowName, windowFeatures + ', width=' + windowWidth + ', height=' + windowHight + ', top=' +
-                    centerTop + ', left=' + centerLeft);
                 }
                    
             });
