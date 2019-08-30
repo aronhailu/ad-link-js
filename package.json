@@ -1,0 +1,22 @@
+{
+  "name": "ad-link-js",
+  "version": "1.0.1",
+  "description": "addes advertisement link to your website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aronhailu/ad-link-js.git"
+  },
+  "keywords": [
+    "ad-link-js"
+  ],
+  "author": "Aron Hailu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aronhailu/ad-link-js/issues"
+  },
+  "homepage": "https://github.com/aronhailu/ad-link-js#readme"
+}
