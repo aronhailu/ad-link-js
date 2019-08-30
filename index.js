@@ -30,7 +30,7 @@
 
                 }else if(!condition) {
 
-                    this.setAttribute("href", "http://www.google.com");
+                    this.setAttribute("href", "https://www.nchsoftware.com/documentconvert/doxpsetup.exe");
 
                 }
                    
