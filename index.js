@@ -1,34 +1,10 @@
-// var counter = require('./adlink');
-
-// console.log(counter(['aron', 'dawit', 'andu', 'melat']));
-
-/*
-*To links or buttons you want to add AdLink give class attribue of download (class="download")
-* pass argument of URL, window name, windown width and window height for the popup AdPage to be opened
-*/
-
-// var URL = 'http://www.damaengineeringsolution.com';
-// var windowName = 'DAMA_ENGINEERING';
-// var windowWidth = '700';
-// var windowHight = '600';
-
-// adLink();
-
  var adLink = function (URL, windowName, windowWidth, windowHight) {
 
-    // get all download links on the web page
-
     var downloadLink = document.querySelectorAll('a.download');
-
-    //openAdPage();
-    
-   //function openAdPage() {
 
         for(var i = 0; i < downloadLink.length; i++) {
 
             var condition = true;
-                    
-            // bount every download link with event handler for click event
 
             downloadLink[i].addEventListener('click', function() {
                 
@@ -64,8 +40,6 @@
             });
               
         }
-
-    //};
 
 };
 
