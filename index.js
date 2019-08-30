@@ -1,4 +1,4 @@
- var adLink = function (URL, windowName, windowWidth, windowHight) {
+ module.exports = function (URL, windowName, windowWidth, windowHight) {
 
     var downloadLink = document.querySelectorAll('a.download');
 
@@ -11,7 +11,6 @@
                 setTimeout(function status() {
 
                     condition = true;
-                    alert('time out expires');
 
                 }, 15000);
 
@@ -31,8 +30,6 @@
 
                 }else if(!condition) {
 
-                    alert("before expires");
-
                     this.setAttribute("href", "http://www.google.com");
 
                 }
@@ -43,7 +40,6 @@
 
 };
 
-module.exports = adLink;
 
 
 
