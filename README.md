@@ -48,6 +48,13 @@ Use the bundle.js file in dist folder as a script for your html file
 
 ```
 
+add the class attribute in your html file with a value of "download"
+
+```
+<a  class="download" href="http://google.com">download</a>
+
+```
+
 ## Versioning
 
 I have used [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
