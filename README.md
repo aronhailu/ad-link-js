@@ -1,19 +1,21 @@
 # ad-link-js
 
-This is an npm package for adding advertisement link on download links of your web page. When the user click the download link a timer starts to count and he will be directed to advertisement site on popup window. If the user click the link before the timer expires he will be directed to the download link otherwise he will be directed to the advertisement link again.
+This is an npm package for adding advertisement link on download links of your web page. When the user click the download link a timer starts to count and he will be directed to advertisement site on popup window. If the user click the link before the timer expires he will be directed to the original download link otherwise he will be directed to the advertisement link again.
 
 
 ### Prerequisites
 
-First you have install the browserify package from npm to convert the package to something usable in the browser.
+First you have to install the browserify package from npm to convert the package to something usable in the browser.
 
 ```
-	Nmp install browserify –g
+nmp install browserify –g
+
 ```
 
 ### Installing
 
 Please follow the procedure below to install this package
+
 
 Install the package in the root directory of your app 
 
@@ -22,7 +24,7 @@ npm install ad-link-js –save
 
 ```
 
-Create a bundle.js file in the root directory of you app and add the following command
+Create a bundle.js file in the root directory of you app and add the following command in it
 
 ```
 const adlink = require('ad-link-js');
@@ -38,7 +40,7 @@ browserify bundle.js -o dist/bundle.js
 
 ```
 
-User the bundle.js file in dist folder as a script for your html file
+Use the bundle.js file in dist folder as a script for your html file
 
 
 ```
@@ -57,11 +59,11 @@ I have used [SemVer](http://semver.org/) for versioning. For the versions availa
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
+* to daniel(danidpx) who challenged me to do this library
 * Inspiration
 * etc
 
