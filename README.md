@@ -8,7 +8,8 @@ This is an npm package for adding advertisement link on download links of your w
 First you have install the browserify package from npm to convert the package to something usable in the browser.
 
 ```
-	Nmp install browserify –g
+nmp install browserify –g
+
 ```
 
 ### Installing
